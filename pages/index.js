@@ -1,21 +1,48 @@
-import Head from "next/head"
-import Image from "next/image"
+import Head from 'next/head'
+import Image from 'next/image'
+
+import lee from '../public/lee.jpg'
+import delba from '../public/delba.jpg'
+import steven from '../public/steven.jpg'
+import steph from '../public/steph.jpg'
+import hassan from '../public/hassan.jpg'
 
 const team = [
   {
-    name: "Lee Robinson",
-    role: "Head of Developer Relations",
-    image: "/lee.jpg",
-    twitterUrl: "https://twitter.com/leeerob",
-    githubUrl: "https://github.com/leerob",
+    name: 'Lee Robinson',
+    role: 'Head of DevRel',
+    image: lee,
+    twitterUrl: 'https://twitter.com/leeerob',
+    githubUrl: 'https://github.com/leerob'
   },
-  // {
-  //   name: "Coming Soon",
-  //   role: "Coming Soon",
-  //   image: "/question.png",
-  //   twitterUrl: "https://twitter.com/",
-  //   githubUrl: "https://github.com/",
-  // },
+  {
+    name: 'Delba de Oliveira',
+    role: 'Developer Advocate',
+    image: delba,
+    twitterUrl: 'https://twitter.com/delba_oliveira',
+    githubUrl: 'https://github.com/delbaoliveira'
+  },
+  {
+    name: 'Steven Tey',
+    role: 'Developer Advocate',
+    image: steven,
+    twitterUrl: 'https://twitter.com/steventey',
+    githubUrl: 'https://github.com/steven-tey'
+  },
+  {
+    name: 'Steph Dietz',
+    role: 'Developer Advocate',
+    image: steph,
+    twitterUrl: 'https://twitter.com/steph_dietz_',
+    githubUrl: 'https://github.com/StephDietz'
+  },
+  {
+    name: 'Hassan El Mghari',
+    role: 'Developer Advocate',
+    image: hassan,
+    twitterUrl: 'hhttps://twitter.com/Nutlope',
+    githubUrl: 'https://github.com/nutlope'
+  }
 ]
 
 export default function Home() {
@@ -26,18 +53,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex flex-col items-center justify-center flex-1 px-20">
-        <div className="max-w-6xl py-24 mx-auto text-center bg-white border shadow-sm px-36 rounded-xl">
+      <main className="flex flex-col items-center justify-center flex-1 px-0 sm:px-20">
+        <div className="max-w-6xl py-12 mx-auto text-center bg-white border shadow-sm px-16 sm:px-36 rounded-xl">
           <div>
-            <h1 className="text-4xl font-extrabold">
-              Meet the Developer Relations Team
+            <h1 className="text-2xl sm:text-4xl font-extrabold">
+              Vercel's Developer Relations Team
             </h1>
             <p className="mt-2 text-lg text-gray-500">
-              Helping developers build and publish wonderful things (or
-              something else here).
+              Helping developers build a better web.
             </p>
           </div>
-          <div className="flex flex-wrap justify-center mt-16 space-x-20">
+          <div className="flex flex-wrap justify-center mt-16 space-x-6">
             {team.map((member) => (
               <div>
                 <Image
@@ -45,20 +71,21 @@ export default function Home() {
                   width={200}
                   height={200}
                   className="rounded-full"
+                  placeholder="blur"
                   alt="Avatar"
                 ></Image>
                 <p className="mt-4 text-xl font-bold">{member.name}</p>
                 <p className="text-gray-500">{member.role}</p>
-                <div className="flex justify-center mt-2 space-x-5">
+                <div className="flex justify-center mt-2 space-x-5 mb-8">
                   <a href={member.twitterUrl} target="_blank">
                     <svg
                       viewBox="0 0 24 24"
                       width="18"
                       height="18"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       fill="none"
                       shapeRendering="geometricPrecision"
                     >
@@ -71,9 +98,9 @@ export default function Home() {
                       width="18"
                       height="18"
                       stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                       fill="none"
                       shapeRendering="geometricPrecision"
                     >
@@ -86,18 +113,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-
-      <footer className="flex items-center justify-center w-full h-20 bg-white border-t">
-        <a
-          className="flex items-center justify-center"
-          href="https://vercel.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
-        </a>
-      </footer>
     </div>
   )
 }
