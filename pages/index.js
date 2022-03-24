@@ -6,6 +6,7 @@ import delba from '../public/delba.jpg'
 import steven from '../public/steven.jpg'
 import steph from '../public/steph.jpg'
 import hassan from '../public/hassan.jpg'
+import lydia from '../public/lydia.jpeg'
 
 const team = [
   {
@@ -14,6 +15,13 @@ const team = [
     image: lee,
     twitterUrl: 'https://twitter.com/leeerob',
     githubUrl: 'https://github.com/leerob'
+  },
+  {
+    name: 'Lydia Hallie',
+    role: 'Staff Developer Advocate',
+    image: lydia,
+    twitterUrl: 'https://twitter.com/lydiahallie',
+    githubUrl: 'https://github.com/lydiahallie'
   },
   {
     name: 'Delba de Oliveira',
@@ -43,13 +51,6 @@ const team = [
     twitterUrl: 'https://twitter.com/Nutlope',
     githubUrl: 'https://github.com/nutlope'
   },
-  {
-    name: 'Lydia Hallie',
-    role: 'Staff Developer Advocate',
-    image: hassan,
-    twitterUrl: 'https://twitter.com/lydiahallie',
-    githubUrl: 'https://github.com/lydiahallie'
-  }
 ]
 
 export default function Home() {
