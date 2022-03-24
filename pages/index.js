@@ -17,7 +17,7 @@ const team = [
   },
   {
     name: 'Delba de Oliveira',
-    role: 'Developer Advocate',
+    role: 'Senior Developer Advocate',
     image: delba,
     twitterUrl: 'https://twitter.com/delba_oliveira',
     githubUrl: 'https://github.com/delbaoliveira'
@@ -42,6 +42,13 @@ const team = [
     image: hassan,
     twitterUrl: 'https://twitter.com/Nutlope',
     githubUrl: 'https://github.com/nutlope'
+  },
+  {
+    name: 'Lydia Hallie',
+    role: 'Staff Developer Advocate',
+    image: hassan,
+    twitterUrl: 'https://twitter.com/lydiahallie',
+    githubUrl: 'https://github.com/lydiahallie'
   }
 ]
 
