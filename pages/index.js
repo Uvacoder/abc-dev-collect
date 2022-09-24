@@ -1,17 +1,18 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import lee from '../public/lee.jpg'
 import delba from '../public/delba.jpg'
-import steven from '../public/steven.jpg'
-import steph from '../public/steph.jpg'
 import hassan from '../public/hassan.jpg'
+import lee from '../public/lee.jpg'
 import lydia from '../public/lydia.jpeg'
+import michael from '../public/michael.jpg'
+import steph from '../public/steph.jpg'
+import steven from '../public/steven.jpg'
 
 const team = [
   {
     name: 'Lee Robinson',
-    role: 'Head of DevRel',
+    role: 'VP of Developer Experience',
     image: lee,
     twitterUrl: 'https://twitter.com/leeerob',
     githubUrl: 'https://github.com/leerob'
@@ -32,7 +33,7 @@ const team = [
   },
   {
     name: 'Steven Tey',
-    role: 'Developer Advocate',
+    role: 'Senior Developer Advocate',
     image: steven,
     twitterUrl: 'https://twitter.com/steventey',
     githubUrl: 'https://github.com/steven-tey'
@@ -45,12 +46,19 @@ const team = [
     githubUrl: 'https://github.com/StephDietz'
   },
   {
+    name: 'Michael Novotny',
+    role: 'Director of Developer Experience',
+    image: michael,
+    twitterUrl: 'https://twitter.com/manovotny',
+    githubUrl: 'https://github.com/manovotny'
+  },
+  {
     name: 'Hassan El Mghari',
-    role: 'Developer Advocate',
+    role: 'Senior Developer Advocate',
     image: hassan,
     twitterUrl: 'https://twitter.com/Nutlope',
     githubUrl: 'https://github.com/nutlope'
-  },
+  }
 ]
 
 export default function Home() {
@@ -73,7 +81,7 @@ export default function Home() {
           </div>
           <div className="flex flex-wrap justify-center mt-16 space-x-6">
             {team.map((member) => (
-              <div>
+              <div key={member.name}>
                 <Image
                   src={member.image}
                   width={200}
